@@ -3,7 +3,7 @@
 
     public static class ModHelperData
     {
-        public const string Version = "1.1.0";
+        public const string Version = "1.2.0";
         public const string Name = "Candy Monkey";
 
         public const string Description = "Adds a Candy Shooter";
