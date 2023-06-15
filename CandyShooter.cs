@@ -7,7 +7,7 @@ using Il2CppAssets.Scripts.Utils;
 using System;
 using System.Text.RegularExpressions;
 using System.IO;
-using Il2CppAssets.Main.Scenes;
+
 using UnityEngine;
 using System.Linq;
 using Il2CppAssets.Scripts.Models.Towers.Behaviors.Attack;
@@ -175,8 +175,8 @@ namespace CandyShooter.Upgrades.TopPath
         public override int Tier => 2;
         public override int Cost => 400;
 
-        public override string DisplayName => "Razor Sharp Candy";
-        public override string Description => "Candy deals even more damage";
+        public override string DisplayName => "Hard Candy";
+        public override string Description => "Candy deals more damage";
         
         
 
@@ -203,7 +203,7 @@ namespace CandyShooter.Upgrades.TopPath
         public override int Cost => 325;
 
         public override string DisplayName => "Sharp Candy";
-        public override string Description => "Candy deals more damage";
+        public override string Description => "Candy pierces through more bloons";
         public override string Icon => "SharpCandy";
 
 
@@ -217,7 +217,7 @@ namespace CandyShooter.Upgrades.TopPath
             }
                 var attackModel = towerModel.GetAttackModel();
                var projectile = attackModel.weapons[0].projectile;
-                projectile.GetDamageModel().damage +=1;
+                projectile.pierce +=1;
                 
                             
         }
@@ -405,30 +405,27 @@ namespace CandyShooter.Upgrades.MiddlePath
     {
         public override int Path => MIDDLE;
         public override int Tier => 3;
-        public override int Cost => 1750;
+        public override int Cost => 1950;
+
+        public override int Priority => -1;
 
         public override string DisplayName => "Triple Shot";
         public override string Description => "Throws 3 Candies at the same time";
         
 
         public override void ApplyUpgrade(TowerModel towerModel)
-          { 
-               foreach (var weaponModel in towerModel.GetWeapons())
-            {
-                
-               towerModel.GetWeapon().emission = new ArcEmissionModel("ArcEmissionModel_", 3, 0, 17.5f, null, false);
-                if (towerModel.tier == 3)
-                { 
-                weaponModel.projectile.pierce -= 4;
-               }
-                else
-                {
-                weaponModel.projectile.pierce -= 1;
-                }
-            }
-                var attackModel = towerModel.GetAttackModel();
-               var projectile = attackModel.weapons[0].projectile;
-               
+          {
+            var attackModel = towerModel.GetAttackModel();
+            var projectile = attackModel.weapons[0].projectile;
+
+            
+        
+                towerModel.GetWeapons()[0].emission = new ArcEmissionModel("ArcEmissionModel_", 3, 0, 17.5f, null, false, false);
+              
+            
+
+
+              
                 
                             
         }
@@ -492,8 +489,8 @@ namespace CandyShooter.Upgrades.MiddlePath
                
             projectile.GetDamageModel().damage +=4;
                 weaponModel.rate *= 0.75f;
-               towerModel.GetWeapon().emission = new ArcEmissionModel("ArcEmissionModel_", 5, 0, 60, null, false);
-                 attackModel.weapons[0].projectile.AddBehavior(new CreateProjectileOnContactModel("CreateProjectileOnContactModel_", candyshrapnel, new ArcEmissionModel("ArcEmissionModel_", 7, 0.0f, 75.0f, null, false), true, false, false));
+               towerModel.GetWeapon().emission = new ArcEmissionModel("ArcEmissionModel_", 5, 0, 60, null, false, false);
+                 attackModel.weapons[0].projectile.AddBehavior(new CreateProjectileOnContactModel("CreateProjectileOnContactModel_", candyshrapnel, new ArcEmissionModel("ArcEmissionModel_", 7, 0.0f, 75.0f, null, false, false), true, false, false));
                 if (projectile == candyshrapnel) { projectile.GetDamageModel().damage = 0; }
               projectile.GetBehavior<TravelStraitModel>().Lifespan = 0.3f;
                 

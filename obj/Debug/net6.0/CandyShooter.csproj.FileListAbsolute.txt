@@ -1,0 +1,10 @@
+C:\Users\Darinsky\Desktop\Mod Sources\CandyShooter\bin\Debug\net6.0\CandyShooter.deps.json
+C:\Users\Darinsky\Desktop\Mod Sources\CandyShooter\bin\Debug\net6.0\CandyShooter.dll
+C:\Users\Darinsky\Desktop\Mod Sources\CandyShooter\obj\Debug\net6.0\CandyShooter.csproj.AssemblyReference.cache
+C:\Users\Darinsky\Desktop\Mod Sources\CandyShooter\obj\Debug\net6.0\CandyShooter.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Darinsky\Desktop\Mod Sources\CandyShooter\obj\Debug\net6.0\CandyShooter.AssemblyInfoInputs.cache
+C:\Users\Darinsky\Desktop\Mod Sources\CandyShooter\obj\Debug\net6.0\CandyShooter.AssemblyInfo.cs
+C:\Users\Darinsky\Desktop\Mod Sources\CandyShooter\obj\Debug\net6.0\CandyShooter.csproj.CoreCompileInputs.cache
+C:\Users\Darinsky\Desktop\Mod Sources\CandyShooter\obj\Debug\net6.0\CandyShooter.dll
+C:\Users\Darinsky\Desktop\Mod Sources\CandyShooter\obj\Debug\net6.0\refint\CandyShooter.dll
+C:\Users\Darinsky\Desktop\Mod Sources\CandyShooter\obj\Debug\net6.0\ref\CandyShooter.dll
